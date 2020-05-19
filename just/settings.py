@@ -21,7 +21,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'x5*%kf@yze*w&y1oj6#9-w=d)!ozm*r^qcb5y8e_a5#w^^6hwn'
+
 ALLOWED_HOSTS = ['justjoint.herokuapp.com']
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

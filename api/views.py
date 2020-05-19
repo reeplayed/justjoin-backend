@@ -37,7 +37,7 @@ class PostView(APIView):
             'exp_lvl': data['exp_lvl'],
             'place_id': data['place_id'],
             'location': location,
-            'description': data.description
+            'description': data['description']
         }
 
         offert = Offert(**offert_data)
