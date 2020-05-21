@@ -25,7 +25,7 @@ SECRET_KEY = 'x5*%kf@yze*w&y1oj6#9-w=d)!ozm*r^qcb5y8e_a5#w^^6hwn'
 ALLOWED_HOSTS = ['justjoint.herokuapp.com']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 
