@@ -23,7 +23,7 @@ class Offert(models.Model):
     description = models.TextField(default='<p>elo</p>', null=True, blank=True)
     location = models.ForeignKey(Location , related_name='offerts', on_delete=models.CASCADE)
     date_add = models.DateTimeField(auto_now_add=True)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(null=True, blank=True, unique=True)
 
 class Tech(models.Model):
     tech = models.CharField(max_length=100)
