@@ -30,7 +30,6 @@ class PostView(APIView):
             'city': data['city'],
             'street': data['street'],
             'company_size': data['company_size'],
-            'image': data['image'],
             'salary_from': data['salary_from'], 
             'salary_to': data['salary_to'], 
             'emp_type': data['emp_type'], 

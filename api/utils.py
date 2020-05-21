@@ -20,3 +20,6 @@ def unique_slug_generator(instance, new_slug=None):
         new_slug = f"{slug}-{random_string_generator(size=4)}"
         return unique_slug_generator(instance, new_slug=new_slug)
     return slug
+
+def random_image():
+    return f'{random.randint(0,9)}.png'
