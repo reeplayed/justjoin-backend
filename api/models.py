@@ -31,9 +31,9 @@ class Tech(models.Model):
     offert = models.ForeignKey( Offert, related_name='technology', on_delete=models.CASCADE)
 
 
-def product_pre_save_receiver(sender, instance, *args, **kwargs):
+def offer_pre(sender, instance, *args, **kwargs):
+    instance.image = random_image()
     if instance.slug is None:
         instance.slug = unique_slug_generator(instance)
 
-
-pre_save.connect(product_pre_save_receiver, sender=Offert)
+pre_save.connect(offer_pre, sender=Offert)
