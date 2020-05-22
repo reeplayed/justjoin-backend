@@ -19,7 +19,7 @@ class Offert(models.Model):
     emp_type = models.CharField(max_length=12)
     place_id = models.CharField(max_length=50)
     exp_lvl = models.CharField(max_length=12)
-    image = models.ImageField(default=random_image())
+    image = models.ImageField(default=random_image)
     description = models.TextField(default='<p>elo</p>', null=True, blank=True)
     location = models.ForeignKey(Location , related_name='offerts', on_delete=models.CASCADE)
     date_add = models.DateTimeField(auto_now_add=True)
@@ -32,7 +32,7 @@ class Tech(models.Model):
 
 
 def offer_pre(sender, instance, *args, **kwargs):
-    instance.image = random_image()
+    # instance.image = random_image()
     if instance.slug is None:
         instance.slug = unique_slug_generator(instance)
 
